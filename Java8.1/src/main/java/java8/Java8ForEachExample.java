@@ -24,13 +24,16 @@ public static void main(String[] args) {
 		}
 		
 		//匿名类遍历foreach
-		myList.forEach(new Consumer<Integer>() {
-
-			public void accept(Integer t) {
-				System.out.println("forEach匿名类的值::"+t);
-			}
-
-		});
+//		myList.forEach(new Consumer<Integer>() {
+//
+//			public void accept(Integer t) {
+//				System.out.println("forEach匿名类的值::"+t);
+//			}
+//
+//		});
+		myList.forEach( t->{
+               	System.out.println("forEach匿名类的值::"+t);
+			});
 		//Consume接口实现
 				MyConsumer action = new MyConsumer();
 				myList.forEach(action);
