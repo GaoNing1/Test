@@ -1,0 +1,14 @@
+1.新建一个helloConteroller
+2.编写一个Spring boot
+3.进行访问测试   localhost:8080/hello
+
+
+spring boot 返回json数据
+spring boot 使用FastJson解析Json数据（引入fastjson依赖库）
+配置fastjson支持两种方法
+第一种：
+（1）启动类继承 extends WebMvcConfigurerAdapter
+（2）覆盖方法configureMessasgeConverters
+第二种：
+（1）在App.java启动类中
+          注入Bean：MessageConverters

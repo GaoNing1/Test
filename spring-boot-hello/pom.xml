@@ -1,0 +1,48 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.gn</groupId>
+  <artifactId>spring-boot-hello</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  
+  
+  
+ <!--第一步： spring boot  父节点依赖，引入这个之后相关的引入就不需要添加version配置，spring boot会自动选择最合适的版本添加 --> 
+  <parent>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-parent</artifactId>
+  <version>1.4.1.RELEASE</version>
+  </parent>
+  
+  
+  
+  <properties>
+  <!-- 第二步：指定一下jdk的版本，使用1.8  默认1.6 -->
+  <java.version>1.8</java.version>
+  </properties>
+  
+  <dependencies>
+  <!-- 第三步：
+  spring-boot-starter-web：MVC、AOP的依赖包... -->
+  <dependency>
+ <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-web</artifactId>
+  
+<!--
+<version></version>
+由于上面指定了parent(spring boot)
+  -->
+ </dependency>
+ <!--
+       添加fastjson依赖库
+       配置fastjson支持两种方法
+       1.启动类继承extends WebMvcConfigurereAdapter
+       2.覆盖方法configureMessageConverters
+  --> 
+  <dependency>
+  <groupId>com.alibaba</groupId>
+  <artifactId>fastjson</artifactId>
+  <version>1.2.15</version>
+  </dependency>
+  </dependencies>
+</project>
