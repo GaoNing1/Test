@@ -12,6 +12,7 @@ import org.springframework.data.redis.core.StringRedisTemplate;
 import redis.clients.jedis.JedisPoolConfig;
 
 /**
+ * redis初始配置
  * 
  * @author gaoning
  * @desc redis config bean
@@ -22,28 +23,25 @@ import redis.clients.jedis.JedisPoolConfig;
 public class RedisConfig {
 
 	private static Logger logger = Logger.getLogger(RedisConfig.class);
-	
-	@Bean
-	@ConfigurationProperties(prefix="spring.redis")
-	public JedisPoolConfig getRedisConfig(){
-		JedisPoolConfig config = new JedisPoolConfig();
-		return config;
-	}
-	
-	@Bean
-	@ConfigurationProperties(prefix="spring.redis")
-	public JedisConnectionFactory getConnectionFactory(){
-		JedisConnectionFactory factory = new JedisConnectionFactory();
-		JedisPoolConfig config = getRedisConfig();
-		factory.setPoolConfig(config);
-		logger.info("JedisConnectionFactory bean init success.");
-		return factory;
-	}
-	
-	
-	@Bean
-	public RedisTemplate<?, ?> getRedisTemplate(){
-		RedisTemplate<?,?> template = new StringRedisTemplate(getConnectionFactory());
-		return template;
-	}
+
+	/*
+	 * @Bean
+	 * 
+	 * @ConfigurationProperties(prefix="spring.redis") public JedisPoolConfig
+	 * getRedisConfig(){ JedisPoolConfig config = new JedisPoolConfig(); return
+	 * config; }
+	 * 
+	 * @Bean
+	 * 
+	 * @ConfigurationProperties(prefix="spring.redis") public
+	 * JedisConnectionFactory getConnectionFactory(){ JedisConnectionFactory
+	 * factory = new JedisConnectionFactory(); JedisPoolConfig config =
+	 * getRedisConfig(); factory.setPoolConfig(config);
+	 * logger.info("JedisConnectionFactory bean init success."); return factory;
+	 * }
+	 * 
+	 * @Bean public RedisTemplate<?, ?> getRedisTemplate(){ RedisTemplate<?,?>
+	 * template = new StringRedisTemplate(getConnectionFactory()); return
+	 * template; }
+	 */
 }

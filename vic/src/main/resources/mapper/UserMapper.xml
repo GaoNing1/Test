@@ -17,7 +17,7 @@
  	
  	
   <select id="getAll" resultMap="UserResultMap">
-   		select * from `user`;
+   		select * from user;
   </select>
  
 </mapper>
