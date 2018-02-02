@@ -16,7 +16,7 @@ public class DelNode {
 		// CuratorFramework
 		// client=CuratorFrameworkFactory.newClient("172.16.191.145",5000,5000,
 		// retryPolicy);
-		CuratorFramework client = CuratorFrameworkFactory.builder().connectString("172.16.191.146:2181")
+		CuratorFramework client = CuratorFrameworkFactory.builder().connectString("172.16.191.147:2181")
 				.sessionTimeoutMs(5000).connectionTimeoutMs(5000).retryPolicy(retryPolicy).build();
 		client.start();
 		client.delete().guaranteed().deletingChildrenIfNeeded().withVersion(-1).forPath("/jike20");
