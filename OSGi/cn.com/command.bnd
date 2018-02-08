@@ -1,0 +1,15 @@
+#
+# cn.com GOGO COMMAND BUNDLE (api)
+#
+
+Bundle-Description: \
+	Provides a command to the Gogo shell. \
+	\
+	${warning;Please update this Bundle-Description in cn.com/command.bnd}
+
+
+Private-Package:  \
+	cn.com.command
+
+
+-includeresource: {readme.md}

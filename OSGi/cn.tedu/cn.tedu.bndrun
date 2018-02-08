@@ -1,0 +1,15 @@
+#
+# cn.tedu LAUNCH SPECIFICATION
+#
+
+
+Bundle-Version:				1.0.0.${tstamp}
+Bundle-SymbolicName:		cn.tedu.launch
+JPM-Command:				provider
+
+
+
+-runbundles: \
+	cn.tedu.provider;version=snapshot,\
+	org.apache.felix.log;version='[1.0.1,1.0.2)'
+-runrequires: osgi.identity;filter:='(osgi.identity=cn.tedu.provider)'

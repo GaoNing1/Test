@@ -1,0 +1,18 @@
+#
+# cn.com API
+#
+
+Bundle-Description: \
+	ORIGINAL API API \
+	\
+	${warning;Please update this Bundle-Description in cn.com/api.bnd}
+
+
+Export-Package:  \
+	cn.com.api
+
+Require-Capability: \
+	compile-only
+
+
+-includeresource: {readme.md}

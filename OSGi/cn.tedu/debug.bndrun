@@ -1,0 +1,13 @@
+#
+# cn.tedu DEBUG LAUNCH SPECFICATION 
+#
+
+-include: ~cn.tedu.bndrun
+
+-runrequires.debug:  \
+	${debug-bundles}
+
+-runtrace: true
+
+-runbundles: \
+	${error;Resolve first}

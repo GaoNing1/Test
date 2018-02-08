@@ -1,0 +1,13 @@
+#
+# cn.com DEBUG LAUNCH SPECFICATION 
+#
+
+-include: ~cn.com.bndrun
+
+-runrequires.debug:  \
+	${debug-bundles}
+
+-runtrace: true
+
+-runbundles: \
+	${error;Resolve first}

@@ -1,0 +1,16 @@
+#
+# cn.com LAUNCH SPECIFICATION
+#
+
+
+Bundle-Version:				1.0.0.${tstamp}
+Bundle-SymbolicName:		cn.com.launch
+JPM-Command:				provider
+
+
+-runrequires:  \
+	osgi.identity;filter:='(osgi.identity=cn.com.provider)'
+
+-runbundles: \
+	cn.com.provider;version=snapshot,\
+	org.apache.felix.log;version='[1.0.1,1.0.2)'

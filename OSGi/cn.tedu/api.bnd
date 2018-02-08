@@ -1,0 +1,18 @@
+#
+# cn.tedu API
+#
+
+Bundle-Description: \
+	ORIGINAL API API \
+	\
+	${warning;Please update this Bundle-Description in cn.tedu/api.bnd}
+
+
+Export-Package:  \
+	cn.tedu.api
+
+Require-Capability: \
+	compile-only
+
+
+-includeresource: {readme.md}

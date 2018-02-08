@@ -1,0 +1,15 @@
+#
+# cn.tedu GOGO COMMAND BUNDLE (api)
+#
+
+Bundle-Description: \
+	Provides a command to the Gogo shell. \
+	\
+	${warning;Please update this Bundle-Description in cn.tedu/command.bnd}
+
+
+Private-Package:  \
+	cn.tedu.command
+
+
+-includeresource: {readme.md}

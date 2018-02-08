@@ -1,0 +1,17 @@
+#
+# cn.tedu BUNDLE
+#
+
+Bundle-Description: \
+	The provider bundle for cn.tedu. \
+	\
+	${warning;Please update this Bundle-Description in cn.tedu/api.bnd}
+
+Export-Package:  \
+	cn.tedu.api
+
+Private-Package: \
+	cn.tedu.provider,\
+	cn.tedu.provider.*
+
+-includeresource: {readme.md}

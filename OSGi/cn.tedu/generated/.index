@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<repository increment="1518050147052" name="cn.tedu" xmlns="http://www.osgi.org/xmlns/repository/v1.0.0">
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="cn.tedu.api"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" type="Version" value="1.0.0.201802080035"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="osgi.content" value="b4ada7b68862712f3a7806983159bb2d92458c0f5a6ac7b8945f5668d3d53baf"/>
+      <attribute name="url" value="generated/cn.tedu.api.jar"/>
+      <attribute name="size" type="Long" value="7088"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="osgi.wiring.bundle" value="cn.tedu.api"/>
+      <attribute name="bundle-version" type="Version" value="1.0.0.201802080035"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="osgi.wiring.host" value="cn.tedu.api"/>
+      <attribute name="bundle-version" type="Version" value="1.0.0.201802080035"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="cn.tedu.api"/>
+      <attribute name="version" type="Version" value="1.0.0"/>
+      <attribute name="bundle-symbolic-name" value="cn.tedu.api"/>
+      <attribute name="bundle-version" type="Version" value="1.0.0.201802080035"/>
+    </capability>
+    <capability namespace="bndtools.workspace">
+      <attribute name="bndtools.workspace" value="file:/Users/gaoning/Documents/com.chinamobile.cmiot.andnet"/>
+      <attribute name="project.path" value="/cn.tedu"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework)(version&gt;=1.8.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="compile-only"/>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="cn.tedu.command"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" type="Version" value="1.0.0.201802080035"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="osgi.content" value="1a2fe3379b18b2ed415fe75e1844b08c2da5717cffe503cb0a9e312a99a2d822"/>
+      <attribute name="url" value="generated/cn.tedu.command.jar"/>
+      <attribute name="size" type="Long" value="5099"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="osgi.wiring.bundle" value="cn.tedu.command"/>
+      <attribute name="bundle-version" type="Version" value="1.0.0.201802080035"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="osgi.wiring.host" value="cn.tedu.command"/>
+      <attribute name="bundle-version" type="Version" value="1.0.0.201802080035"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="cn.tedu.api"/>
+      <attribute name="version" type="Version" value="1.0.0"/>
+      <attribute name="bundle-symbolic-name" value="cn.tedu.command"/>
+      <attribute name="bundle-version" type="Version" value="1.0.0.201802080035"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <attribute name="objectClass" type="List&lt;String&gt;" value="cn.tedu.command.ExampleCommand"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <attribute name="objectClass" type="List&lt;String&gt;" value="cn.tedu.command.ExampleCommand"/>
+      <attribute name="osgi.command.function" value="example"/>
+      <attribute name="osgi.command.scope" value="example"/>
+      <directive name="uses" value="cn.tedu.command"/>
+    </capability>
+    <capability namespace="bndtools.workspace">
+      <attribute name="bndtools.workspace" value="file:/Users/gaoning/Documents/com.chinamobile.cmiot.andnet"/>
+      <attribute name="project.path" value="/cn.tedu"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=cn.tedu.api)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=cn.tedu.provider)"/>
+    </requirement>
+    <requirement namespace="osgi.extender">
+      <directive name="filter" value="(&amp;(osgi.extender=osgi.component)(version&gt;=1.3.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.service">
+      <directive name="filter" value="(objectClass=cn.tedu.api.ExampleApi)"/>
+      <directive name="effective" value="active"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+    <requirement namespace="osgi.service">
+      <directive name="filter" value="(objectClass=cn.tedu.api.ExampleApi)"/>
+      <directive name="effective" value="active"/>
+    </requirement>
+    <requirement namespace="osgi.extender">
+      <directive name="filter" value="(&amp;(osgi.extender=osgi.component)(version&gt;=1.3.0)(!(version&gt;=2.0.0)))"/>
+      <directive name="effective" value="active"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="cn.tedu.provider"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" type="Version" value="1.0.0.201802080035"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="osgi.content" value="b2339e0134c4bde948b336815785f704c8b87297c73db25f67546a3427b848e6"/>
+      <attribute name="url" value="generated/cn.tedu.provider.jar"/>
+      <attribute name="size" type="Long" value="7084"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="osgi.wiring.bundle" value="cn.tedu.provider"/>
+      <attribute name="bundle-version" type="Version" value="1.0.0.201802080035"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="osgi.wiring.host" value="cn.tedu.provider"/>
+      <attribute name="bundle-version" type="Version" value="1.0.0.201802080035"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="cn.tedu.api"/>
+      <attribute name="version" type="Version" value="1.0.0"/>
+      <attribute name="bundle-symbolic-name" value="cn.tedu.provider"/>
+      <attribute name="bundle-version" type="Version" value="1.0.0.201802080035"/>
+    </capability>
+    <capability namespace="bndtools.workspace">
+      <attribute name="bndtools.workspace" value="file:/Users/gaoning/Documents/com.chinamobile.cmiot.andnet"/>
+      <attribute name="project.path" value="/cn.tedu"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework)(version&gt;=1.8.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+  </resource>
+</repository>

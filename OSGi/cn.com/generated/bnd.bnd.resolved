@@ -1,0 +1,3 @@
+cn.com.provider;version=snapshot;resolution=file:/Users/gaoning/Documents/com.chinamobile.cmiot.andnet/cn.com/generated/cn.com.provider.jar
+org.apache.felix.configadmin;version='[1.8.8,1.8.9)';resolution=file:/Users/gaoning/.m2/repository/org/apache/felix/org.apache.felix.configadmin/1.8.8/org.apache.felix.configadmin-1.8.8.jar
+org.apache.felix.log;version='[1.0.1,1.0.2)';resolution=file:/Users/gaoning/.m2/repository/org/apache/felix/org.apache.felix.log/1.0.1/org.apache.felix.log-1.0.1.jar

@@ -1,0 +1,17 @@
+#
+# cn.com BUNDLE
+#
+
+Bundle-Description: \
+	The provider bundle for cn.com. \
+	\
+	${warning;Please update this Bundle-Description in cn.com/api.bnd}
+
+Export-Package:  \
+	cn.com.api
+
+Private-Package: \
+	cn.com.provider.*,\
+	cn.com.aaa
+
+-includeresource: {readme.md}
